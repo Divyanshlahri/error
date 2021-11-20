@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+body{
+background : black;
+color:white;
+}
+h1{
+
+color:red;
+text-weight:bold;
+text-shadow:4px 3px grey;
+}
+</style>
+
+</head>
+<body>
+
+
+
+<center>
+<h1> Wikipedia </h1>
+</center>
+<div id= "mainText">
+
+"Home" is the second episode of the fourth season of the American
+ science fiction television series The X-Files, which originally aired
+ on the Fox network on October 11, 1996. Directed by K
+im Manners and written by Glen Morgan and James Wong, it is a "mo
+nster-of-the-week" story, unconnected to the overarching mythology of The X-Files. Watched by 18.85 million viewers, the initial broadcast had a Nielsen rating of 11.9. The series centers on FBI special agents Fox Mulder (David Duchovny) and Dana Scully (Gillian Anderson), who work on cases linked to the paranormal. In this episode, Mulder and Scully investigate the death of a baby born with severe physical defects. While in the isolated town of Home, Pennsylvania, they meet a family of deformed farmers who have not left their home in a decade. "Home" was the first episode of the series to receive a viewer discretion warning for graphic content. 
+
+
+</div><br>
+<br><br>
+<center>
+
+<img src = "https://th.bing.com/th/id/R.96ae4965922d6dc1535ca732ff5fd44c?rik=1t7wNancT7njWg&riu=http%3a%2f%2faoav.org.uk%2fwp-content%2fuploads%2f2014%2f03%2f2000px-Wikipedia-logo-v2.svg_.png&ehk=wEy8GUVNek2sZmvqN9xKDaZEbVzThh9BdQ78qLTmxUQ%3d&risl=&pid=ImgRaw&r=0" width = 500px height = 400px onmouseover = "change()" onmouseout="restore()"><br>
+
+<a href="https://en.wikipedia.org/wiki/Main_Page" target = "_blank" onmouseover="linkcolor()"  onmouseout="remve()"> Wikipedia </a></center>
+<h2>List of Items</h2>
+<ul>
+<li>Google </li>
+<li>wikipedia</li>
+<li>Bing</li>
+</ul>
+<input type ="text" name="newItem">
+<button type = "button" onclick=" makenew()" > Click me</button>
+
+
+<script>
+
+var num = document.querySelector("h1");
+num.style.color="green"
+num.style.background="red"
+
+function change(){
+var image = document.querySelector("img");
+image.style.width="100px"
+image.style.background="green";
+}
+function restore(){
+var image = document.querySelector("img");
+image.style.width="500px";
+image.style.background="black";
+}
+function linkcolor(){
+var clr = document.querySelector("a");
+clr.style.color="grey"
+clr.style.background="yellow";
+}
+function remve(){
+var rmv = document.querySelector("a");
+rmv.style.color="indigo";
+rmv.style.background="black";
+
+}
+
+
+function makenew(){
+
+var mainlist = document.querySelector('ul');
+var li = document.createElement('li');
+
+var inputselect=document.querySelector('input[name="newItem"]');
+var textvalue = inputselect.value;
+console.log(textvalue);
+inputselect.value='';
+var tempnode=document.createTextNode(textvalue)
+ ;
+li.appendChild(tempnode);
+mainlist.appendChild(li);
+}
+</script>
+
+
+
+
+</body>
+</html>
